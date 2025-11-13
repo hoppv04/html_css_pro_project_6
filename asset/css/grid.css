@@ -3,7 +3,7 @@
 .container,
 .container-fluid {
   --column-size: 12;
-  --spacer: 10px;
+  --spacer: 12px;
 
   width: 100%;
   margin-left: auto;
@@ -314,10 +314,6 @@
     max-width: 720px;
   }
 
-  .hide-md {
-    display: none;
-  }
-
   .g-md-0 {
     --spacer: 0;
   }
@@ -451,10 +447,6 @@
     max-width: 960px;
   }
 
-  .hide-lg {
-    display: none;
-  }
-
   .g-lg-0 {
     --spacer: 0;
   }
@@ -586,10 +578,6 @@
     max-width: 1170px;
   }
 
-  .hide-xl {
-    display: none;
-  }
-
   .g-xl-0 {
     --spacer: 0;
   }
@@ -719,10 +707,6 @@
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
-  }
-
-  .hide-xxl {
-    display: none;
   }
 
   .g-xxl-0 {

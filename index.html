@@ -21,6 +21,94 @@
     <link rel="stylesheet" href="./asset/css/styles.css" />
   </head>
   <body>
-    <h1>Portfolio</h1>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__body">
+        <!-- Header Logo -->
+        <a href="#!" class="header__logo">
+          <img
+            src="./asset/imgs/mobile-logo.png"
+            alt="Portfolio"
+            class="header__icon header__icon--mobile"
+          />
+          <img
+            src="./asset/imgs/desktop-logo.png"
+            alt="Portfolio"
+            class="header__icon header__icon--desktop"
+          />
+        </a>
+
+        <div class="header__email">
+          <div class="header__email-img">
+            <img
+              src="./asset/icons/mail.svg"
+              alt="hi@arif.interactive"
+              class="header__email-icon"
+            />
+          </div>
+          <a href="mailto:hi@arif.interactive" class="header__email-address"
+            >hi@arif.interactive</a
+          >
+        </div>
+
+        <nav class="navbar" aria-label="Desktop navigation">
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link">Projects</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link">Journey</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link">Service</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <label for="header__menu-checkbox" class="header__menu-toggle">
+          <span class="header__menu-line"></span>
+          <span class="header__menu-line"></span>
+        </label>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <input
+          type="checkbox"
+          name="header__menu-checkbox"
+          id="header__menu-checkbox"
+          class="header__menu-checkbox"
+          hidden
+        />
+        <label for="header__menu-checkbox" class="mobile-menu__overlay"></label>
+        <nav class="mobile-navbar" aria-label="Mobile navigation">
+          <!-- Mobile Logo -->
+          <a href="#!" class="mobile__logo">
+            <img
+              src="./asset/imgs/mobile-logo.png"
+              alt="Portfolio"
+              class="mobile__icon"
+            />
+          </a>
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link">Projects</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link">Journey</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link">Service</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#!" class="navbar__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   </body>
 </html>
