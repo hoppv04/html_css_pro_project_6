@@ -73,7 +73,6 @@ section + section {
 }
 
 .dots {
-  margin-top: 30px;
   padding-bottom: 1px;
   display: flex;
   align-items: center;
@@ -398,6 +397,10 @@ section + section {
   line-height: 1.75;
 }
 
+.services__pagination {
+  margin-top: 30px;
+}
+
 /* Our Works */
 .our-works {
   background: #5d3bee;
@@ -564,12 +567,38 @@ section + section {
   line-height: 1.375;
 }
 
-.about__video {
+/* Testimonial */
+.testimonial {
   position: relative;
-  margin-top: 40px;
+  margin-top: 208px;
+  padding-bottom: 68px;
+  background: #fbfaff;
+  min-height: 500px;
 }
 
-.about__video-play {
+.testimonial__decor {
+  position: absolute;
+  bottom: 0;
+}
+
+.testimonial__decor--left {
+  left: 0;
+}
+
+.testimonial__decor--right {
+  right: 0;
+}
+
+.testimonial__decor--desktop {
+  display: none;
+}
+
+.testimonial__video {
+  position: relative;
+  transform: translateY(-168px);
+}
+
+.testimonial__video-play {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -587,18 +616,18 @@ section + section {
   cursor: pointer;
 }
 
-.about__video-icon {
+.testimonial__video-icon {
   width: 11px;
 }
 
-.about__video-thumb {
+.testimonial__video-thumb {
   display: block;
   width: 100%;
   height: 276px;
   object-fit: cover;
 }
 
-.about__video-note {
+.testimonial__video-note {
   color: var(--text-second-color);
   --height: 44px;
 
@@ -613,6 +642,84 @@ section + section {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+}
+
+.testimonial__content {
+  overflow: hidden;
+  margin-top: -168px;
+}
+
+.testimonial__desc {
+  text-align: center;
+}
+
+.testimonial__reviews {
+  margin-top: 40px;
+  flex-wrap: nowrap;
+}
+
+.testimonial__quote {
+  color: var(--text-second-color);
+
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.67;
+}
+
+.testimonial__author {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+}
+
+.testimonial__avatar {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonial__avatar::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  inset: 0;
+  background-color: #f29764;
+}
+
+.testimonial__img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-top: 8px;
+  display: block;
+}
+
+.testimonial__name {
+  color: var(--text-primary-color);
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.67;
+}
+
+.testimonial__role {
+  color: var(--text-second-color);
+
+  margin-top: 3px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.81;
+}
+
+.testimonial__pagination {
+  margin-top: 30px;
 }
 
 /* Responsive */
@@ -990,27 +1097,78 @@ section + section {
     line-height: 1.67;
   }
 
-  .about__video {
-    margin-top: 70px;
+  /* Testimonial */
+  .testimonial {
+    margin-top: 375px;
+    padding-bottom: 74px;
   }
 
-  .about__video-thumb {
+  .testimonial__content {
+    margin: -155px auto 0;
+    width: 679px;
+  }
+
+  .testimonial__video {
+    transform: translateY(-305px);
+  }
+
+  .testimonial__video-thumb {
     height: 628px;
   }
 
-  .about__video-play {
+  .testimonial__video-play {
     width: 111px;
     height: 111px;
   }
 
-  .about__video-icon {
+  .testimonial__video-icon {
     width: 15px;
   }
 
-  .about__video-note {
+  .testimonial__video-note {
     --height: 62px;
 
     width: 170px;
     font-size: 1.8rem;
+  }
+
+  .testimonial__heading {
+    text-align: center;
+  }
+
+  .testimonial__desc {
+    width: 570px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .testimonial__reviews {
+    margin-top: 60px;
+  }
+
+  .testimonial__quote {
+    font-size: 2.4rem;
+    line-height: 1.67;
+  }
+
+  .testimonial__author {
+    margin-top: 36px;
+  }
+
+  .testimonial__name {
+    font-size: 3rem;
+    line-height: 1.33;
+  }
+
+  .testimonial__pagination {
+    margin-top: 40px;
+  }
+
+  .testimonial__decor--mobile {
+    display: none;
+  }
+
+  .testimonial__decor--desktop {
+    display: inline-block;
   }
 }
