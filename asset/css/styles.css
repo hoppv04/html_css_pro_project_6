@@ -13,7 +13,6 @@
 
 html {
   font-size: 62.5%;
-  background-color: #fbfaff;
 }
 
 body {
@@ -61,7 +60,23 @@ section + section {
   line-height: 1.625;
 }
 
+.section-heading {
+  color: var(--text-primary-color);
+
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.21;
+  text-align: center;
+  letter-spacing: -1.12px;
+}
+
 /* Header */
+.header {
+  background-color: #fbfaff;
+}
+
 .header__body {
   margin: 0 6px;
   padding: 20px 14px 16px;
@@ -163,7 +178,8 @@ section + section {
 
 /* Hero */
 .hero {
-  margin-top: 50px;
+  padding-top: 50px;
+  background-color: #fbfaff;
 }
 
 .hero__title {
@@ -259,6 +275,49 @@ section + section {
   width: 259px;
 }
 
+/* Clients */
+.clients__heading {
+  position: relative;
+  width: 170px;
+  padding-top: 5px;
+}
+
+.clients__heading::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 2px;
+  background-color: #5d3bee;
+}
+
+.clients__grid {
+  margin-top: 40px;
+}
+
+.clients__group {
+  margin-top: 34px;
+  display: flex;
+}
+
+.clients__icon--warner-bros {
+  margin-left: 70px;
+}
+
+.clients__icon--creative-cloud {
+  margin-left: 61px;
+}
+
+.clients__icon--adobe {
+  margin-left: 78px;
+}
+.clients__icon--canva {
+  margin-left: 36px;
+}
+
 /* Responsive */
 /* Desktop */
 @media (min-width: 768px) {
@@ -268,11 +327,23 @@ section + section {
     line-height: 1.67;
   }
 
+  .section-heading {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 4.2rem;
+    line-height: 1.2;
+    letter-spacing: -1.68px;
+    text-align: left;
+  }
+
   /* Header */
+  .header {
+    padding-top: 58px;
+  }
+
   .header__body {
     position: relative;
     width: min(100%, 1330px);
-    margin-top: 58px;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
@@ -348,7 +419,7 @@ section + section {
 
   /* Hero */
   .hero {
-    margin-top: 71px;
+    padding-top: 71px;
   }
 
   .hero__body {
@@ -428,5 +499,42 @@ section + section {
 
   .hero__social + .hero__social {
     margin-left: 20px;
+  }
+
+  /* Clients */
+  .clients {
+    margin-top: 98px;
+  }
+
+  .clients__body {
+    display: flex;
+    align-items: center;
+    column-gap: 110px;
+    padding-left: 102px;
+  }
+
+  .clients__heading {
+    flex-shrink: 0;
+    display: flex;
+    padding-top: 0;
+    width: 254px;
+  }
+
+  .clients__heading::before {
+    top: 22px;
+    left: -110px;
+    width: 86px;
+    transform: translateX(0);
+  }
+
+  .clients__grid {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 66px;
+  }
+
+  .clients__group:first-child {
+    margin-top: 0;
   }
 }
