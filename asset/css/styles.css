@@ -722,6 +722,86 @@ section + section {
   margin-top: 30px;
 }
 
+/* FAQ */
+.faq__heading {
+  margin: 0;
+  width: 316px;
+  text-align: left;
+}
+
+.faq__list {
+  margin-top: 40px;
+}
+
+.faq__item {
+  position: relative;
+  margin-top: 40px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #08182f;
+}
+
+.faq__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+  font-size: 2rem;
+  border-radius: 50%;
+  border: 2px solid rgba(22, 26, 28, 0.2);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.faq__toggle::before {
+  content: "+";
+  color: #161a1c;
+}
+
+.faq__question {
+  color: var(--text-primary-color);
+
+  width: 264px;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.96px;
+  transition: 0.5s;
+}
+
+.faq__answer {
+  color: #51586a;
+
+  margin-top: 15px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.625;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.faq__checkbox:checked ~ .faq__question {
+  color: #5d3bee;
+}
+
+.faq__checkbox:checked ~ .faq__answer {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.faq__checkbox:checked ~ .faq__toggle {
+  border-color: rgba(93, 59, 238, 0.2);
+}
+
+.faq__checkbox:checked ~ .faq__toggle::before {
+  content: "-";
+  color: #5d3bee;
+}
+
 /* Responsive */
 /* Desktop */
 @media (min-width: 768px) {
@@ -1170,5 +1250,46 @@ section + section {
 
   .testimonial__decor--desktop {
     display: inline-block;
+  }
+
+  /* FAQ */
+  .faq {
+    margin-top: 95px;
+  }
+
+  .faq__heading {
+    width: 575px;
+  }
+
+  .faq__list {
+    margin-top: 80px;
+  }
+
+  .faq__item {
+    margin-top: 60px;
+  }
+
+  .faq__question {
+    font-size: 3.2rem;
+    width: fit-content;
+    letter-spacing: -1.28px;
+  }
+
+  .faq__answer {
+    margin-top: 24px;
+    width: 487px;
+    font-size: 1.8rem;
+    line-height: 1.67;
+  }
+
+  .faq__toggle {
+    top: 12px;
+    width: 50px;
+    height: 50px;
+    font-size: 3rem;
+  }
+
+  .faq__checkbox:checked ~ .faq__toggle {
+    top: 35px;
   }
 }
